@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Restauração de faróis com tecnologia de selagem alemã. Mais visibilidade para suas viagens e valorização imediata para o seu patrimônio." />
+  <meta property="og:title" content="Bq Faróis — Restauração Profissional de Faróis" />
+  <meta property="og:description" content="Tecnologia de selagem alemã. Polimento técnico, vitrificação UV, troca de LED e cristalização." />
+  <meta property="og:type" content="website" />
+  <title>Bq Faróis — Restauração Profissional de Faróis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bk: #0D0D0D;
+      --s1: #141414;
+      --s2: #1C1C1C;
+      --s3: #242424;
+      --red: #C0180C;
+      --ora: #E85A0A;
+      --amb: #F5A800;
+      --win: #6B0A0A;
+      --txt: #F0EAE0;
+      --mut: #7A756E;
+      --bdr: rgba(245, 168, 0, 0.13);
+      --bdr-red: rgba(192, 24, 12, 0.2);
+      --grad: linear-gradient(135deg, #6B0A0A 0%, #C0180C 30%, #E85A0A 65%, #F5A800 100%);
+      --gtxt: linear-gradient(90deg, #C0180C 0%, #E85A0A 50%, #F5A800 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bk);
+      color: var(--txt);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .bb { font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px; }
+
+    .g-text {
+      background: var(--gtxt);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 88px 40px 96px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--bdr);
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(ellipse at center, rgba(192, 24, 12, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid rgba(232, 90, 10, 0.35);
+      background: rgba(232, 90, 10, 0.07);
+      color: var(--ora);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 7px 22px;
+      border-radius: 20px;
+      margin-bottom: 36px;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(56px, 9vw, 100px);
+      line-height: 0.93;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--mut);
+      line-height: 1.85;
+      max-width: 500px;
+      margin: 0 auto 48px;
+      font-weight: 300;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--grad);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 17px 40px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-cta:hover { opacity: 0.88; transform: translateY(-2px); }
+    .btn-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 72px;
+      margin-top: 68px;
+      padding-top: 52px;
+      border-top: 1px solid var(--bdr);
+      flex-wrap: wrap;
+    }
+
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      background: var(--gtxt);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-lbl {
+      font-size: 10px;
+      color: var(--mut);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 3px;
+    }
+
+    /* ── SECTIONS ── */
+    .sec { padding: 96px 40px; max-width: 1080px; margin: 0 auto; }
+
+    .sec-full {
+      padding: 96px 40px;
+      background: var(--s1);
+      border-top: 1px solid var(--bdr);
+      border-bottom: 1px solid var(--bdr);
+    }
+
+    .sec-inner { max-width: 1080px; margin: 0 auto; }
+
+    .sec-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--ora);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .sec-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(38px, 5.5vw, 64px);
+      letter-spacing: 1.5px;
+      text-align: center;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .sec-sub {
+      font-size: 14px;
+      color: var(--mut);
+      line-height: 1.8;
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* ── DIFERENCIAIS ── */
+    .diff-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 64px;
+      align-items: center;
+    }
+
+    .diff-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .dcard {
+      background: var(--s2);
+      border: 1px solid var(--bdr);
+      border-radius: 0 10px 10px 0;
+      padding: 28px 24px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .dcard:hover { border-color: rgba(232, 90, 10, 0.45); transform: translateX(8px); }
+    .d1 { border-left: 3px solid var(--red); }
+    .d2 { border-left: 3px solid var(--ora); }
+    .d3 { border-left: 3px solid var(--amb); }
+
+    .dicon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dicon svg { width: 20px; height: 20px; stroke-width: 1.5; fill: none; }
+    .d1 .dicon { background: rgba(192, 24, 12, 0.12); }
+    .d1 .dicon svg { stroke: var(--red); }
+    .d2 .dicon { background: rgba(232, 90, 10, 0.12); }
+    .d2 .dicon svg { stroke: var(--ora); }
+    .d3 .dicon { background: rgba(245, 168, 0, 0.12); }
+    .d3 .dicon svg { stroke: var(--amb); }
+
+    .dtitle { font-size: 14px; font-weight: 600; margin-bottom: 7px; }
+    .dtext { font-size: 13px; color: var(--mut); line-height: 1.65; }
+
+    .video-ph {
+      background: var(--s2);
+      border: 1px solid var(--bdr);
+      border-radius: 12px;
+      aspect-ratio: 9 / 16;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      max-width: 360px;
+      width: 100%;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: border-color 0.25s;
+    }
+
+    .video-ph:hover { border-color: rgba(232, 90, 10, 0.4); }
+
+    .play-btn {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 2px solid rgba(245, 168, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .video-ph:hover .play-btn { border-color: var(--amb); transform: scale(1.1); }
+    .play-btn svg { width: 26px; height: 26px; fill: var(--amb); margin-left: 5px; }
+
+    .vph-label { font-size: 11px; color: var(--mut); text-transform: uppercase; letter-spacing: 2.5px; }
+    .vph-dim { font-size: 10px; color: rgba(122, 117, 110, 0.45); letter-spacing: 1px; margin-top: 3px; }
+
+    /* ── CAROUSEL ── */
+    .car-wrap { margin-top: 64px; }
+    .car-track-outer { overflow: hidden; border-radius: 12px; }
+
+    .car-track {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .car-slide {
+      flex: 0 0 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .car-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 56px 24px;
+    }
+
+    .cs-before { background: #1a1210; border-right: 1px solid var(--bdr); }
+    .cs-after { background: #100c08; }
+
+    .cs-lbl { font-size: 9px; text-transform: uppercase; letter-spacing: 3px; }
+    .cs-before .cs-lbl { color: #4a3a2a; }
+    .cs-after .cs-lbl { color: var(--ora); }
+
+    .lens {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid;
+      transition: transform 0.3s;
+    }
+
+    .car-slide:hover .lens { transform: scale(1.05); }
+    .lens-b { border-color: #4a3a2a; background: radial-gradient(circle, #3a2e1a 10%, #1a1210 70%); }
+    .lens-a { border-color: var(--amb); background: radial-gradient(circle, var(--amb) 5%, var(--ora) 40%, #100c08 80%); }
+
+    .car-info {
+      grid-column: 1 / -1;
+      background: var(--s2);
+      padding: 22px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--bdr);
+    }
+
+    .cmodel { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px; }
+    .csvc { font-size: 12px; color: var(--mut); margin-top: 2px; }
+
+    .car-badge {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: rgba(245, 168, 0, 0.1);
+      border: 1px solid rgba(245, 168, 0, 0.25);
+      color: var(--amb);
+      padding: 7px 18px;
+      border-radius: 20px;
+    }
+
+    .car-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .car-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--s2);
+      border: 1px solid var(--bdr);
+      color: var(--txt);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    }
+
+    .car-btn:hover { border-color: rgba(232, 90, 10, 0.5); background: var(--s3); transform: scale(1.08); }
+
+    .car-dots { display: flex; gap: 9px; align-items: center; }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--s3);
+      border: 1px solid var(--bdr);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .dot.on { background: var(--ora); transform: scale(1.4); }
+
+    /* ── DEPOIMENTOS ── */
+    .tgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 64px;
+    }
+
+    .tcard {
+      background: var(--s2);
+      border: 1px solid var(--bdr);
+      border-radius: 10px;
+      padding: 22px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .tcard:hover { border-color: rgba(232, 90, 10, 0.38); transform: translateY(-5px); }
+
+    .tstars { font-size: 11px; color: var(--amb); letter-spacing: 2.5px; margin-bottom: 13px; }
+
+    .tquote {
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--txt);
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    .tauth { display: flex; align-items: center; gap: 10px; }
+
+    .tav {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--grad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .tname { font-size: 12px; font-weight: 600; }
+    .tcity { font-size: 10px; color: var(--mut); }
+
+    /* ── SERVIÇOS (flip cards) ── */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 64px;
+    }
+
+    .svc-wrap { height: 210px; perspective: 900px; }
+
+    .svc-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .svc-wrap:hover .svc-inner { transform: rotateY(180deg); }
+
+    .svc-front, .svc-back {
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 1px solid var(--bdr);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .svc-front { background: var(--s2); }
+    .svc-back { background: var(--s3); border-color: rgba(232, 90, 10, 0.3); transform: rotateY(180deg); }
+
+    .svc-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      color: var(--ora);
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .svc-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 1px;
+      line-height: 1;
+      color: var(--txt);
+    }
+
+    .svc-hint {
+      font-size: 9px;
+      color: rgba(122, 117, 110, 0.45);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 14px;
+    }
+
+    .svc-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 1.4;
+      fill: none;
+      stroke: var(--ora);
+      margin-bottom: 14px;
+    }
+
+    .svc-desc { font-size: 12px; color: var(--mut); line-height: 1.6; }
+
+    /* ── FAQ ── */
+    .faq-list {
+      margin-top: 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .fitem { border-radius: 8px; overflow: hidden; }
+
+    .fq {
+      width: 100%;
+      text-align: left;
+      background: var(--s2);
+      border: 1px solid var(--bdr);
+      padding: 20px 24px;
+      color: var(--txt);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-radius: 8px;
+      transition: border-color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .fq:hover { border-color: rgba(232, 90, 10, 0.38); }
+
+    .farrow { font-size: 14px; color: var(--ora); transition: transform 0.25s; flex-shrink: 0; }
+
+    .fa {
+      display: none;
+      background: var(--s1);
+      padding: 18px 24px;
+      font-size: 13px;
+      color: var(--mut);
+      line-height: 1.8;
+      border: 1px solid var(--bdr);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      font-weight: 300;
+    }
+
+    .fitem.open .fq { border-radius: 8px 8px 0 0; }
+    .fitem.open .farrow { transform: rotate(180deg); }
+    .fitem.open .fa { display: block; }
+
+    /* ── CTA FINAL ── */
+    .cta-sec {
+      text-align: center;
+      padding: 104px 40px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid var(--bdr-red);
+    }
+
+    .cta-glow {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 320px;
+      background: radial-gradient(ellipse at center, rgba(192, 24, 12, 0.16) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-h {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 7vw, 76px);
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      line-height: 0.95;
+    }
+
+    .cta-sub {
+      font-size: 14px;
+      color: var(--mut);
+      max-width: 420px;
+      margin: 0 auto 44px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--bdr);
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .flogo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      background: var(--gtxt);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 2.5px;
+    }
+
+    .fcopy { font-size: 11px; color: var(--mut); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { padding: 64px 20px 72px; }
+      .hero h1 { font-size: clamp(48px, 12vw, 72px); }
+      .hero-stats { gap: 32px; }
+      .sec { padding: 64px 20px; }
+      .sec-full { padding: 64px 20px; }
+      .diff-wrap { grid-template-columns: 1fr; gap: 32px; }
+      .video-ph { max-width: 100%; aspect-ratio: 9/14; }
+      .tgrid { grid-template-columns: 1fr 1fr; }
+      .svc-grid { grid-template-columns: 1fr 1fr; }
+      .car-side { padding: 36px 16px; }
+      .car-info { padding: 16px 20px; flex-direction: column; gap: 10px; text-align: center; }
+      footer { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .tgrid { grid-template-columns: 1fr; }
+      .svc-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="badge">Tecnologia de Selagem Alemã</div>
+    <h1 class="bb">
+      Recupere o <span class="g-text">olhar</span><br>
+      e a segurança<br>
+      do seu veículo.
+    </h1>
+    <p class="hero-sub">
+      Restauração de faróis com tecnologia de selagem alemã. Mais visibilidade
+      para suas viagens e valorização imediata para o seu patrimônio.
+    </p>
+    <a class="btn-cta" href="https://wa.me/5531999999999" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+      </svg>
+      Quero um orçamento via WhatsApp
+    </a>
+    <div class="hero-stats">
+      <div><div class="stat-num">+2.000</div><div class="stat-lbl">Faróis restaurados</div></div>
+      <div><div class="stat-num">5 anos</div><div class="stat-lbl">De experiência</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-lbl">Garantia real</div></div>
+      <div><div class="stat-num">4.9★</div><div class="stat-lbl">Avaliação média</div></div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="sec">
+    <p class="sec-tag">Por que a Bq Faróis?</p>
+    <h2 class="sec-title bb">O diferencial que você<br><span class="g-text">vê e sente.</span></h2>
+    <p class="sec-sub">Não fazemos polimento comum. Aplicamos ciência e tecnologia para resultados que duram.</p>
+    <div class="diff-wrap">
+      <div class="diff-list">
+        <div class="dcard d1">
+          <div class="dicon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <div class="dtitle">Tecnologia de Ponta</div>
+            <div class="dtext">Não usamos apenas lixas. Aplicamos polímeros especializados que devolvem a proteção UV original ao plástico do farol, com resultado de fábrica.</div>
+          </div>
+        </div>
+        <div class="dcard d2">
+          <div class="dicon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="dtitle">Rapidez Estratégica</div>
+            <div class="dtext">Seu carro pronto para a estrada em poucas horas. Sem perder tempo, sem abrir mão de qualidade. Agenda flexível, inclusive aos sábados.</div>
+          </div>
+        </div>
+        <div class="dcard d3">
+          <div class="dicon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="dtitle">Garantia Real</div>
+            <div class="dtext">Transparência que dura. Emitimos certificado de serviço com especificação técnica detalhada de cada etapa aplicada no seu veículo.</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;align-items:center">
+        <div class="video-ph" role="button" aria-label="Assistir vídeo do processo">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <div class="vph-label">Veja o processo</div>
+          <div class="vph-dim">1080 × 1920 · Vídeo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES E DEPOIS -->
+  <div class="sec-full">
+    <div class="sec-inner">
+      <p class="sec-tag">Resultados reais</p>
+      <h2 class="sec-title bb">Antes e depois:<br><span class="g-text">a diferença fala por si.</span></h2>
+      <p class="sec-sub">Cada restauração é um case de transformação. Navegue pelos resultados.</p>
+      <div class="car-wrap">
+        <div class="car-track-outer">
+          <div class="car-track" id="carTrack">
+            <div class="car-slide">
+              <div class="car-side cs-before"><div class="lens lens-b"></div><span class="cs-lbl">Antes</span></div>
+              <div class="car-side cs-after"><div class="lens lens-a"></div><span class="cs-lbl">Depois</span></div>
+              <div class="car-info"><div><div class="cmodel bb">BMW Série 3</div><div class="csvc">Polimento técnico + vitrificação UV alemã</div></div><div class="car-badge">Premium</div></div>
+            </div>
+            <div class="car-slide">
+              <div class="car-side cs-before"><div class="lens lens-b"></div><span class="cs-lbl">Antes</span></div>
+              <div class="car-side cs-after"><div class="lens lens-a"></div><span class="cs-lbl">Depois</span></div>
+              <div class="car-info"><div><div class="cmodel bb">Jeep Compass</div><div class="csvc">Cristalização + troca de lâmpada LED</div></div><div class="car-badge">SUV</div></div>
+            </div>
+            <div class="car-slide">
+              <div class="car-side cs-before"><div class="lens lens-b"></div><span class="cs-lbl">Antes</span></div>
+              <div class="car-side cs-after"><div class="lens lens-a"></div><span class="cs-lbl">Depois</span></div>
+              <div class="car-info"><div><div class="cmodel bb">Audi A4</div><div class="csvc">Restauração completa · protocolo importado</div></div><div class="car-badge">Importado</div></div>
+            </div>
+            <div class="car-slide">
+              <div class="car-side cs-before"><div class="lens lens-b"></div><span class="cs-lbl">Antes</span></div>
+              <div class="car-side cs-after"><div class="lens lens-a"></div><span class="cs-lbl">Depois</span></div>
+              <div class="car-info"><div><div class="cmodel bb">Toyota Hilux</div><div class="csvc">Polimento + selagem UV + LED off-road</div></div><div class="car-badge">Off-road</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="car-nav">
+          <button class="car-btn" id="carPrev" aria-label="Anterior">&#8592;</button>
+          <div class="car-dots" id="carDots"></div>
+          <button class="car-btn" id="carNext" aria-label="Próximo">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEPOIMENTOS -->
+  <section class="sec">
+    <p class="sec-tag">Clientes que aprovaram</p>
+    <h2 class="sec-title bb">O que dizem<br><span class="g-text">sobre nós.</span></h2>
+    <div class="tgrid">
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Parece que troquei o farol por um novo. Achei que teria que comprar peças — não precisei de nada."</p><div class="tauth"><div class="tav">RM</div><div><div class="tname">Rafael M.</div><div class="tcity">BMW 320i · Barbacena</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Agora sinto segurança para viajar à noite. A visibilidade melhorou demais. Recomendo sem hesitar."</p><div class="tauth"><div class="tav">CP</div><div><div class="tname">Carla P.</div><div class="tcity">Jeep Compass · BH</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Atendimento pontual, resultado impecável. O certificado de serviço foi um detalhe que me surpreendeu muito."</p><div class="tauth"><div class="tav">TL</div><div><div class="tname">Thiago L.</div><div class="tcity">Audi A3 · Juiz de Fora</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Fiz vitrificação e troca de LED. A diferença na iluminação à noite é absurda. Vale cada centavo."</p><div class="tauth"><div class="tav">MS</div><div><div class="tname">Marcelo S.</div><div class="tcity">Hilux · Conselheiro Lafaiete</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Atendimento a domicílio no meu condomínio. Praticidade total. O farol ficou como saído da concessionária."</p><div class="tauth"><div class="tav">FA</div><div><div class="tname">Fernanda A.</div><div class="tcity">Golf · BH</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Minha frota de 8 carros restaurada em dois dias. Serviço profissional, preço justo e garantia no serviço."</p><div class="tauth"><div class="tav">JB</div><div><div class="tname">João B.</div><div class="tcity">Frota Corporativa · Barbacena</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <div class="sec-full">
+    <div class="sec-inner">
+      <p class="sec-tag">O que oferecemos</p>
+      <h2 class="sec-title bb">Serviços<br><span class="g-text">especializados.</span></h2>
+      <p class="sec-sub">Passe o mouse para conhecer cada serviço em detalhe.</p>
+      <div class="svc-grid">
+        <div class="svc-wrap">
+          <div class="svc-inner">
+            <div class="svc-front"><div class="svc-num">01</div><div class="svc-name bb">Polimento Técnico</div><div class="svc-hint">passe o mouse</div></div>
+            <div class="svc-back"><div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12s1.5-3 4-3 4 3 4 3-1.5 3-4 3-4-3-4-3z"/><circle cx="12" cy="12" r="1.5" fill="var(--ora)" stroke="none"/></svg></div><div class="svc-desc">Remoção da camada oxidada com compostos de alta abrasividade controlada. Resultado imediato e visível.</div></div>
+          </div>
+        </div>
+        <div class="svc-wrap">
+          <div class="svc-inner">
+            <div class="svc-front"><div class="svc-num">02</div><div class="svc-name bb">Vitrificação UV</div><div class="svc-hint">passe o mouse</div></div>
+            <div class="svc-back"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="svc-desc">Selagem com polímero alemão de proteção UV. Evita o amarelamento por até 3 anos. Acompanha certificado de serviço.</div></div>
+          </div>
+        </div>
+        <div class="svc-wrap">
+          <div class="svc-inner">
+            <div class="svc-front"><div class="svc-num">03</div><div class="svc-name bb">Troca LED</div><div class="svc-hint">passe o mouse</div></div>
+            <div class="svc-back"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2v1M4.2 4.2l.7.7M2 12H1M22 12h1M19.1 4.9l-.7.7M12 6a6 6 0 010 12"/></svg></div><div class="svc-desc">Iluminação até 3× mais potente. Vida útil superior ao halogênio. Instalação com garantia de encaixe original.</div></div>
+          </div>
+        </div>
+        <div class="svc-wrap">
+          <div class="svc-inner">
+            <div class="svc-front"><div class="svc-num">04</div><div class="svc-name bb">Cristalização</div><div class="svc-hint">passe o mouse</div></div>
+            <div class="svc-back"><div class="svc-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="svc-desc">Acabamento espelhado que potencializa a projeção luminosa. Ideal após o polimento para máximo brilho.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="sec">
+    <p class="sec-tag">Dúvidas frequentes</p>
+    <h2 class="sec-title bb">Respostas rápidas para<br><span class="g-text">decidir com confiança.</span></h2>
+    <div class="faq-list">
+      <div class="fitem">
+        <button class="fq" onclick="toggleFaq(this)">O amarelado volta logo após o polimento?<span class="farrow">▾</span></button>
+        <div class="fa">Não com o nosso processo. A selagem com polímero UV alemão recria a camada protetora original do fabricante. Sem essa proteção, qualquer polimento convencional amarela em meses. Com a vitrificação Bq, o resultado dura até 3 anos.</div>
+      </div>
+      <div class="fitem">
+        <button class="fq" onclick="toggleFaq(this)">Quanto tempo dura o serviço?<span class="farrow">▾</span></button>
+        <div class="fa">O processo completo é concluído em poucas horas. Você deixa o carro de manhã e retira no mesmo dia, sem comprometer sua rotina.</div>
+      </div>
+      <div class="fitem">
+        <button class="fq" onclick="toggleFaq(this)">Atendem a domicílio ou apenas na sede?<span class="farrow">▾</span></button>
+        <div class="fa">Atendemos nas duas modalidades. Para condomínios, empresas e frotas, oferecemos atendimento a domicílio com agendamento prévio. Entre em contato pelo WhatsApp para verificar disponibilidade na sua região.</div>
+      </div>
+      <div class="fitem">
+        <button class="fq" onclick="toggleFaq(this)">Qualquer modelo de carro pode ser atendido?<span class="farrow">▾</span></button>
+        <div class="fa">Sim. Atendemos populares, SUVs, premium e importados. Cada projeto recebe avaliação individual para definir o melhor protocolo de restauração.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-sec">
+    <div class="cta-glow"></div>
+    <p class="sec-tag" style="margin-bottom:18px">Pronto para transformar seu veículo?</p>
+    <h2 class="cta-h bb">Solicite seu orçamento.<br><span class="g-text">É rápido e sem compromisso.</span></h2>
+    <p class="cta-sub">Fale com um especialista pelo WhatsApp e receba avaliação personalizada para o seu carro.</p>
+    <a class="btn-cta" href="https://wa.me/5531999999999" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+      </svg>
+      Quero um orçamento via WhatsApp
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="flogo">Bq Faróis</div>
+    <div class="fcopy">© 2025 Bq Faróis · Restauração profissional com tecnologia alemã</div>
+  </footer>
+
+  <script>
+    // Carousel
+    var carCur = 0, carTotal = 4;
+
+    function carBuildDots() {
+      var d = document.getElementById('carDots');
+      d.innerHTML = '';
+      for (var i = 0; i < carTotal; i++) {
+        var s = document.createElement('span');
+        s.className = 'dot' + (i === 0 ? ' on' : '');
+        s.setAttribute('data-i', i);
+        s.setAttribute('aria-label', 'Slide ' + (i + 1));
+        s.onclick = function () { carGo(+this.getAttribute('data-i')); };
+        d.appendChild(s);
+      }
+    }
+
+    function carGo(n) {
+      carCur = n;
+      document.getElementById('carTrack').style.transform = 'translateX(-' + carCur * 100 + '%)';
+      document.querySelectorAll('.dot').forEach(function (d, i) {
+        d.classList.toggle('on', i === carCur);
+      });
+    }
+
+    document.getElementById('carPrev').onclick = function () { carGo((carCur - 1 + carTotal) % carTotal); };
+    document.getElementById('carNext').onclick = function () { carGo((carCur + 1) % carTotal); };
+    carBuildDots();
+
+    // Auto-advance carousel
+    setInterval(function () { carGo((carCur + 1) % carTotal); }, 5000);
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      var item = btn.closest('.fitem');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.fitem.open').forEach(function (x) { x.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Touch swipe support for carousel
+    var tsX = null;
+    var trackEl = document.getElementById('carTrack');
+    trackEl.addEventListener('touchstart', function (e) { tsX = e.touches[0].clientX; });
+    trackEl.addEventListener('touchend', function (e) {
+      if (tsX === null) return;
+      var diff = tsX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) carGo(diff > 0 ? (carCur + 1) % carTotal : (carCur - 1 + carTotal) % carTotal);
+      tsX = null;
+    });
+  </script>
+</body>
+</html>
